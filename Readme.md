@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Сергей Левин](https://up.htmlacademy.ru/htmlcss/29/user/1566267).
-* Наставник: `Юрий Михин`.
+* Наставник: [Юрий Михин](https://htmlacademy.ru/profile/undgrnd)
 
 ---
 
