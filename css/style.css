@@ -99,7 +99,7 @@
 /* Global */
 
 body {
-  font-family: "Cuprum", "Arial", "";
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   color: var(--basic-white-400);
 
@@ -115,7 +115,7 @@ body {
 
 /* ptsans */
 .font-ptsans {
-  font-family: "PT Sans", "Arial", ""; 
+  font-family: "PT Sans", "Arial", sans-serif; 
 }
 
 /* header*/
@@ -363,7 +363,7 @@ color: var(--basic-red-400);
 }
 
 .product-cards__link {
-  font-family: "PT Sans", "Arial", "sans-serif";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
