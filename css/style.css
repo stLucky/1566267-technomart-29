@@ -99,10 +99,11 @@
 /* Global */
 
 body {
-  font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", "sans-serif";
   font-weight: 400;
   color: var(--basic-white-400);
-  background-color: var(--basic-white);
+
+  background-color: var(--basic-white-400);
 }
 
 .link {
@@ -110,6 +111,11 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: var(--basic-white-400);
+}
+
+/* ptsans */
+.font-ptsans {
+  font-family: "PT Sans", "Arial", "san-serif"; 
 }
 
 /* header*/
@@ -322,7 +328,6 @@ color: var(--basic-red-400);
 /* main__texts */
 
 .main__texts {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -344,7 +349,6 @@ color: var(--basic-red-400);
 /* catalogues__body */
 
 .product-cards__title {
-  font-family: "PT Sans", "Arial", san-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -352,7 +356,6 @@ color: var(--basic-red-400);
 }
 
 .product-cards__invalid-price {
-  font-family: "PT Sans", "Arial", san-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -360,7 +363,7 @@ color: var(--basic-red-400);
 }
 
 .product-cards__link {
-  font-family: "PT Sans", "Arial", san-serif;
+  font-family: "PT Sans", "Arial", "san-serif";
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -533,7 +536,6 @@ background-color: var(--basic-darkblue-400);
 }
 
 .breadcrumbs__link {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -551,7 +553,6 @@ background-color: var(--basic-darkblue-400);
 /* filter */
 
 .filter__title {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -568,7 +569,6 @@ background-color: var(--basic-darkblue-400);
 }
 
 .sort-menu__title {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -581,7 +581,6 @@ background-color: var(--basic-darkblue-400);
 
 .sort-menu__link,
 .sort-menu__optional-link {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -646,7 +645,6 @@ background-color: var(--basic-darkblue-400);
 /* pagination-menu */
 
 .pagination-menu__link {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -662,7 +660,6 @@ background-color: var(--basic-darkblue-400);
 }
 
 .product-info__text {
-  font-family: "PT Sans", "Arial", san-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
