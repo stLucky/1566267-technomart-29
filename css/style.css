@@ -113,7 +113,6 @@ body {
   color: var(--basic-white-400);
 }
 
-/* layout-positioner */
 .layout-positioner {
   width: 940px;
   margin: 0 auto;
@@ -135,7 +134,7 @@ body {
 /* visually-hidden */
 
 .visually-hidden {
-color: var(--basic-black);
+visibility: hidden;
 }
 
 /* header*/
@@ -180,10 +179,6 @@ color: var(--basic-black);
   text-align: center;
 
   background-color: var(--basic-green-400);
-}
-
-.header-top__link_type_buy {
-  
 }
 
 .header-top__link_type_buy:hover {
