@@ -16,14 +16,14 @@
     <div class="header-top">
       <div class="layout-positioner">
         <div class="header-top-content">
-          <img class="header-top__logo" src="img/logo-technomart-header.svg" width="108" height="18"
-            alt="Логотип нашего магазина Техномарт">
+          <span class="header-top__logo"><img class="header-top__logo-img" src="img/logo-technomart-header.svg"
+              width="108" height="18" alt="Логотип нашего магазина Техномарт"></span>
           <form class="search-form header-top__search-form" action="#" method="POST">
             <input class="search-form__input" type="search" placeholder="Поиск">
           </form>
           <a class="link header-top__link header-top__link_type_bookmarks" href="blank.html">Закладки:
             <span>0</span></a>
-          <a class="link header-top__link" href="blank.html">Корзина: <span>0</span></a>
+          <a class="link header-top__link header-top__link_type_cart" href="blank.html">Корзина: <span>0</span></a>
           <a class="link header-top__link header-top__link_type_buy" href="blank.html">Оформить заказ</a>
         </div>
       </div>
@@ -73,46 +73,59 @@
       <section class="shop-menu">
         <h2 class="visually-hidden">Наш ассортимент и услуги</h2>
         <ul class="shop-menu__list">
-          <li class="shop-menu__item shop-menu__item_color_orange">
+          <li class="shop-menu__item shop-menu__item_type_first">
             <h3 class="shop-menu__title">Материалы</h3>
             <p class="mark shop-menu__mark">New</p>
             <a class="link shop-menu__link" href="blank.html">На любой вкус</a>
           </li>
-          <li class="shop-menu__item shop-menu__item_color_blue">
+          <li class="shop-menu__item shop-menu__item_type_second">
             <h3 class="shop-menu__title">Инструмент</h3>
             <a class="link shop-menu__link" href="blank.html">На все случаи</a>
           </li>
-          <li class="shop-menu__item shop-menu__item_color_purple">
+          <li class="shop-menu__item shop-menu__item_type_third">
             <h3 class="shop-menu__title">Техника</h3>
             <a class="link shop-menu__link" href="blank.html">Для стройки</a>
           </li>
-          <li class="shop-menu__item shop-menu__item_color_green">
+          <li class="shop-menu__item shop-menu__item_type_fourth">
             <h3 class="shop-menu__title">Скидки 50%</h3>
             <a class="link shop-menu__link" href="blank.html">На 350 товаров</a>
           </li>
-          <li class="shop-menu__item shop-menu__item_color_lightorange">
+          <li class="shop-menu__item shop-menu__item_type_fifth">
             <h3 class="shop-menu__title">Доставка</h3>
             <a class="link shop-menu__link" href="blank.html">Бесплатно</a>
           </li>
           <li class="shop-menu__item-slider">
-            <figure class="slider">
-              <figcaption class="slider__text">
-                <h2 class="slider__title">Перфораторы</h2>
-                <p class="slider__subtitle">Настоящие мужские игрушки</p>
-              </figcaption>
-              <img class="slider__image" src="img/slider-image-1.jpg" width="620" height="266"
-                alt="Рабочий в руках с перфоратором BOSCH">
-              <a class="link link-button slider__link" href="catalog.html">Открыть каталог</a>
-            </figure>
-            <figure class="slider">
-              <figcaption class="slider__text">
-                <h2 class="slider__title">Дрели</h2>
-                <p class="slider__subtitle">Соседям на радость</p>
-              </figcaption>
-              <img class="slider__image" src="img/slider-image-2.jpg" width="620" height="266"
-                alt="Рабочий в руках с перфоратором BOSCH">
-              <a class="link link-button slider__link" href="catalog.html">Открыть каталог</a>
-            </figure>
+            <section class="slider">
+              <ul class="slider__list">
+                <li class="slider__item slide slide-current">
+                  <figure class="figure">
+                    <figcaption class="figure__text">
+                      <h2 class="figure__title">Перфораторы</h2>
+                      <p class="figure__subtitle">Настоящие мужские игрушки</p>
+                    </figcaption>
+                    <img class="figure__image" src="img/slider-image-1.jpg" width="620" height="266"
+                      alt="Рабочий в руках с перфоратором BOSCH">
+                    <a class="link link-button figure__link" href="catalog.html">Открыть каталог</a>
+                  </figure>
+                </li>
+                <li class="slider__item slide">
+                  <figure class="figure">
+                    <figcaption class="figure__text">
+                      <h2 class="figure__title">Дрели</h2>
+                      <p class="figure__subtitle">Соседям на радость</p>
+                    </figcaption>
+                    <img class="figure__image" src="img/slider-image-2.jpg" width="620" height="266"
+                      alt="Рабочий в руках с перфоратором BOSCH">
+                    <a class="link link-button figure__link" href="catalog.html">Открыть каталог</a>
+                  </figure>
+                </li>
+              </ul>
+              <div class="slider-controls">
+                <button class="slider-controls__button slider-controls__button-current" type="button"
+                  aria-label="Первый слайд"></button>
+                <button class="slider-controls__button" type="button" aria-label="Второй слайд"></button>
+              </div>
+            </section>
           </li>
         </ul>
       </section>
@@ -235,9 +248,9 @@
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
           </div>
-          <ul class="services__list">
+          <ul class="slider-services-controls">
             <li class="services__item">
-              <button class="services__button" type="button">Доставка</button>
+              <button class="services__button services__button-current" type="button">Доставка</button>
             </li>
             <li class="services__item">
               <button class="services__button" type="button">Гарантия</button>
@@ -246,31 +259,44 @@
               <button class="services__button" type="button">Кредит</button>
             </li>
           </ul>
-          <div class="description-services">
-            <h3 class="main__titles description-services__title">Доставка</h3>
-            <p class="main__texts description-services__text">
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-            </p>
-          </div>
-          <div class="description-services">
-            <h3 class="main__titles description-services__title">Гарантия</h3>
-            <p class="main__texts description-services__text">
-              Если купленный у нас товар поломается или заискрит, а также в случае пожара,
-              спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.
-              Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-            </p>
-          </div>
-          <div class="description-services">
-            <h3 class="main__titles description-services__title">Кредит</h3>
-            <p class="main__texts description-services__text">
-              Залезть в долговую яму стало проще!<br>
-              Кредитные консультанты придут вам на помощь.
-            </p>
-            <a class="link link-button" href="blank.html">Отправить заявку</a>
-          </div>
+          <section class="slider-services">
+            <ul class="slider-services__list">
+              <li class="slide-services slide-services-current">
+                <div class="description-services description-services__delivery">
+                  <h3 class="main__titles description-services__title">Доставка</h3>
+                  <p class="main__texts description-services__text">
+                    Мы с удовольствием доставим ваш товар прямо<br>
+                    к вашему подъезду совершенно бесплатно!<br>
+                    Ведь мы неплохо заработаем,<br>
+                    поднимая его на ваш этаж!
+                  </p>
+                </div>
+              </li>
+              <li class="slide-services ">
+                <div class="description-services description-services__guarantee">
+                  <h3 class="main__titles description-services__title">Гарантия</h3>
+                  <p class="main__texts description-services__text">
+                    Если купленный у нас товар поломается или заискрит,<br>
+                     а также в случае пожара, спровоцированного его возгоранием, 
+                    вы всегда можете быть уверены в нашей гарантии.
+                    Мы обменяем сгоревший товар на новый.<br> 
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+
+                </div>
+              </li>
+              <li class="slide-services">
+                <div class="description-services description-services__credit">
+                  <h3 class="main__titles description-services__title">Кредит</h3>
+                  <p class="main__texts description-services__text">
+                    Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <a class="link link-button link-button description-services__link" href="blank.html">Отправить заявку</a>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
@@ -314,12 +340,12 @@
       <div class="layout-positioner">
         <div class="footer-top-content">
           <div class="logo-address-content">
-            <img class="footer__logo" src="img/logo-technomart-footer.svg" width="138" height="23"
-              alt="Логотип нашего магазина Техномарт">
+            <span class="footer__logo"><img class="footer__logo-img" src="img/logo-technomart-footer.svg" width="137" height="22"
+              alt="Логотип нашего магазина Техномарт"></span>
             <address class="footer-address">
               <p class="footer-address__text">
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-                <a class="link footer-address__phone" href="tel:+78125550555">+7(812)555-0-55</a>
+                <a class="link footer-address__phone" href="tel:+78125550555">+7 (812) 555-0-55</a>
               </p>
             </address>
           </div>
@@ -362,13 +388,19 @@
             <h2 class="visually-hidden">Мы в социальных сетях!</h2>
             <ul class="social-menu">
               <li class="social-menu__item">
-                <a class="link social-menu__list" href="blank.html">ВКонтакте</a>
+                <a class="link social-menu__link social-menu__link-vk" href="blank.html">
+                  <span class="visually-hidden">ВКонтакте</span>
+                </a>
               </li>
               <li class="social-menu__item">
-                <a class="link social-menu__list" href="blank.html">Фейсбук</a>
+                <a class="link social-menu__link social-menu__link-fb" href="blank.html">
+                  <span class="visually-hidden">Фейсбук</span>
+                </a>
               </li>
               <li class="social-menu__item">
-                <a class="link social-menu__list" href="blank.html">Инстаграм</a>
+                <a class="link social-menu__link social-menu__link-inst" href="blank.html">
+                 <span class="visually-hidden">Инстаграм</span>
+                </a>
               </li>
             </ul>
           </section>
@@ -378,7 +410,7 @@
               <a class="link developers__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
             <p class="developers__site">
-              Разработано -
+              Разработано &ndash;
               <a class="link developers__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </p>
           </div>
