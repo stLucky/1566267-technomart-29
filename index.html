@@ -18,11 +18,15 @@
         <div class="header-top-content">
           <span class="header-top__logo"><img class="header-top__logo-img" src="img/logo-technomart-header.svg"
               width="108" height="18" alt="Логотип нашего магазина Техномарт"></span>
-          <form class="search-form header-top__search-form" action="#" method="POST">
-            <label>
-              <span class="visually-hidden">Поиск</span>
-              <input class="search-form__input" type="search" placeholder="Поиск">
+          <form class="search-form header-top__search-form" action="#" method="GET">
+            <label for="search-form__input">
+              <span class="visually-hidden">Поиск по сайту</span>
             </label>
+            <input id="search-form__input" type="search" placeholder="Поиск:">
+            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
+                fill="#fff" opacity=".3" /></svg>
           </form>
           <a class="link header-top__link header-top__link_type_bookmarks" href="blank.html">Закладки:
             <span>0</span></a>
@@ -323,7 +327,7 @@
               <li class="slide-services slide-services-current">
                 <div class="description-services description-services__delivery">
                   <h3 class="main__titles description-services__title">Доставка</h3>
-                  <p class="main__texts description-services__text">
+                  <p class="main__texts description-services__text description-services__text_type_delivery">
                     Мы с удовольствием доставим ваш товар прямо<br>
                     к вашему подъезду совершенно бесплатно!<br>
                     Ведь мы неплохо заработаем,<br>
@@ -333,25 +337,26 @@
               </li>
               <li class="slide-services">
                 <div class="description-services description-services__guarantee">
-                  <h3 class="main__titles description-services__title">Гарантия</h3>
-                  <p class="main__texts description-services__text">
-                    Если купленный у нас товар поломается или заискрит,<br>
-                    а также в случае пожара, спровоцированного его возгоранием,
+                  <h3 class="main__titles description-services__title description-services__title_type_guarantee">Гарантия</h3>
+                  <p class="main__texts description-services__text description-services__text_type_guarantee">
+                    Если купленный у нас товар поломается или заискрит,
+                    а&nbsp;также в случае пожара, спровоцированного его
+                    возгоранием,
                     вы всегда можете быть уверены в нашей гарантии.
-                    Мы обменяем сгоревший товар на новый.<br>
-                    Дом уж восстановите как-нибудь сами.
+                    Мы обменяем сгоревший товар на новый.
+                    Дом&nbsp;уж восстановите как-нибудь сами.
                   </p>
 
                 </div>
               </li>
-              <li class="slide-services ">
+              <li class="slide-services">
                 <div class="description-services description-services__credit">
                   <h3 class="main__titles description-services__title">Кредит</h3>
-                  <p class="main__texts description-services__text">
+                  <p class="main__texts description-services__text description-services__text_type_credit">
                     Залезть в долговую яму стало проще!<br>
                     Кредитные консультанты придут вам на помощь.
                   </p>
-                  <a class="link link-button link-button description-services__link" href="blank.html">Отправить
+                  <a class="link link-button description-services__link" href="blank.html">Отправить
                     заявку</a>
                 </div>
               </li>
@@ -384,7 +389,7 @@
           <section class="contacts">
             <h2 class="main__titles contacts__title">Контакты</h2>
             <p class="main__texts contacts__text">
-              Вы можете забрать товар сами, заехав в наш офис:
+              Вы можете забрать товар сами,<br> заехав в наш офис:
             </p>
             <a class="link contacts__image-link" href=""><img class="contacts__image" src="img/map.jpg" width="300"
                 height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
@@ -480,22 +485,35 @@
   </footer>
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Обратная связь</h2>
-    <div class="modal-feedback__form">
-      <!-- Форма -->
-    </div>
-    <div class="modal-feedback__bottom">
-      <button class="link-button modal-feedback__button" type="button">Отправить</button>
-    </div>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="feedback-form__top">
+        <p class="feedback-form__item-contacts">
+          <label for="feedback-name">Ваше имя:</label>
+          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="feedback-form__item-contacts">
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p class="feedback-form__item-text">
+          <label for="feedback-text">Текст письма:</label>
+          <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <div class="feedback-form__bottom">
+        <button class="link-button feedback-form__button" type="button">Отправить</button>
+      </div>
+    </form>
+    <button class="modal-close modal-close__feedback" type="button" aria-label="Закрыть"></button>
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412363!2d30.32089461559019!3d59.
       938796869048495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c8
       79f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0
-      YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1601925728022!5m2!1sru!2sru" width="943" height="449" allowfullscreen title="Офис компании по адресу ул.
+      YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1601925728022!5m2!1sru!2sru" width="943" height="442" allowfullscreen title="Офис компании по адресу ул.
       Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close modal-close__map" type="button" aria-label="Закрыть"></button>
   </section>
 </body>
 
