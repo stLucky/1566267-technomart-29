@@ -17,15 +17,19 @@
             <img class="header-top__logo-img" src="img/logo-technomart-header.svg" width="108" height="18"
               alt="Логотип нашего магазина Техномарт">
           </a>
-          <form class="search-form header-top__search-form" action="#" method="POST">
-            <label>
-              <span class="visually-hidden">Поиск</span>
-              <input class="search-form__input" type="search" placeholder="Поиск">
+          <form class="search-form header-top__search-form" action="#" method="GET">
+            <label for="search-form__input">
+              <span class="visually-hidden">Поиск по сайту</span>
             </label>
+            <input id="search-form__input" type="search" placeholder="Поиск:">
+            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
+                fill="#fff" opacity=".3" /></svg>
           </form>
           <a class="link header-top__link header-top__link_type_bookmarks" href="blank.html">Закладки:
             <span>0</span></a>
-          <a class="link header-top__link header-top__link_type_cart-full header-top__link_enabled "
+          <a class="link header-top__link header-top__link_type_cart header-top__link_enabled "
             href="blank.html">Корзина: <span>10</span></a>
           <a class="link header-top__link header-top__link_type_buy" href="blank.html">Оформить заказ</a>
         </div>
@@ -44,7 +48,7 @@
             <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="authorized-user-menu">
-            <ul class="authorized-user-menu__list">
+            <ul class="user-menu authorized-user-menu__list">
               <li class="authorized-user-menu__item">
                 <a class="link user-menu__link authorized-user-menu__link-profile" href="blank.html">
                   <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +119,80 @@
       <div class="main-container">
         <section class="filter">
           <h2 class="filter__title">Фильтр</h2>
-          <!--Здесь будет форма фильтра-->
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
+            <fieldset class="filter-price filter-form__fieldset">
+              <legend class="filter-subtitle filter-price__title">Цена</legend>
+              <div class="filter-price-content">
+                <div class="range-controls">
+                  <div class="range-controls__scale">
+                    <div class="range-controls__bar"></div>
+                  </div>
+                  <div class="range-controls__toggle range-controls__toggle_type_min" tabindex="0"></div>
+                  <div class="range-controls__toggle range-controls__toggle_type_max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  &ndash;
+                  <label class="max-price">
+                    <input type="text" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-manufacturers filter-form__fieldset">
+              <legend class="filter-subtitle filter-manufacturers__title">Производители</legend>
+              <ul class="filter-manufacturers__list">
+                <li class="filter-manufacturers__item">
+                  <input class="visually-hidden filter-manufacturers__input" type="checkbox" name="Bosch"
+                    id="filter-manufacturers__bosch" checked>
+                  <label class="filter__text filter-manufacturers__label"
+                    for="filter-manufacturers__bosch">Bosch</label>
+                </li>
+                <li class="filter-manufacturers__item">
+                  <input class="visually-hidden filter-manufacturers__input" type="checkbox" name="Interscol"
+                    id="filter-manufacturers__interscol">
+                  <label class="filter__text filter-manufacturers__label"
+                    for="filter-manufacturers__interscol">Интерскол</label>
+                </li>
+                <li class="filter-manufacturers__item">
+                  <input class="visually-hidden filter-manufacturers__input" type="checkbox" name="Makita"
+                    id="filter-manufacturers__makita" checked>
+                  <label class="filter__text filter-manufacturers__label"
+                    for="filter-manufacturers__makita">Makita</label>
+                </li>
+                <li class="filter-manufacturers__item">
+                  <input class="visually-hidden filter-manufacturers__input" type="checkbox" name="Dewalt"
+                    id="filter-manufacturers__dewalt">
+                  <label class="filter__text filter-manufacturers__label"
+                    for="filter-manufacturers__dewalt">Dewalt</label>
+                </li>
+                <li class="filter-manufacturers__item">
+                  <input class="visually-hidden filter-manufacturers__input" type="checkbox" name="Hitachi"
+                    id="filter-manufacturers__hitachi">
+                  <label class="filter__text filter-manufacturers__label"
+                    for="filter-manufacturers__hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-power filter-form__fieldset">
+              <legend class="filter-subtitle filter-power__title">Питание</legend>
+              <ul class="filter-power__list">
+                <li class="filter-power__item">
+                  <input class="visually-hidden filter-power__input" type="radio" name="power" value="accumulator"
+                    id="filter-power__accumulator" checked>
+                  <label class="filter__text filter-power__label" for="filter-power__accumulator">Аккумуляторные</label>
+                </li>
+                <li class="filter-power__item">
+                  <input class="visually-hidden filter-power__input" type="radio" name="power" value="networking"
+                    id="filter-power__networking">
+                  <label class="filter__text filter-power__label" for="filter-power__networking">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter-form__button" type="submit">Показать</button>
+          </form>
         </section>
         <div class="main-content">
           <div class="sort-menu">
@@ -342,8 +419,9 @@
       <div class="layout-positioner">
         <div class="footer-top-content">
           <div class="logo-address-content">
-            <a class="footer__logo" href="index.html"><img class="footer__logo-img" src="img/logo-technomart-footer.svg"
-                width="138" height="23" alt="Логотип нашего магазина Техномарт"></a>
+            <a class="footer__logo footer__logo_type_link" href=" index.html"><img class="footer__logo-img"
+                src="img/logo-technomart-footer.svg" width="138" height="23"
+                alt="Логотип нашего магазина Техномарт"></a>
             <address class="footer-address">
               <p class="footer-address__text">
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -432,7 +510,7 @@
       <a class="link link-button modal-cart__link" href="blank.html">Оформить заказ</a>
       <button class="link-button modal-cart__button" type="button">Продолжить покупки</button>
     </div>
-    <button class="link-button modal-close modal-close__cart" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close modal-close__cart" type="button" aria-label="Закрыть"></button>
   </div>
 </body>
 
