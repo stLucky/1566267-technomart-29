@@ -902,15 +902,22 @@ body {
   margin: 22px 43px 28px 33px;
 }
 
-.product-card:hover {
+.product-card:hover,
+.product-card:focus {
   box-shadow: 0 4px 20px var(--basic-black-opacity-015);
 }
 
-.product-card:hover .product-card__image {
+.product-card:focus {
+  outline: none;
+}
+
+.product-card:hover .product-card__image,
+.product-card:focus .product-card__image {
   display: none;
 }
 
-.product-card:hover .useraction-menu {
+.product-card:hover .useraction-menu,
+.product-card:focus .useraction-menu {
   display: block;
 }
 
@@ -2004,11 +2011,38 @@ body {
   background-position: 0 0;
 }
 
-.filter-manufacturers__input:checked+.filter-manufacturers__label::before{
+.filter-manufacturers__input:checked+.filter-manufacturers__label::before {
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on.svg);
 }
+
+.filter-manufacturers__label:hover::before,
+.filter-manufacturers__input:focus+.filter-manufacturers__label:before {
+  background-image: url(../img/checkbox-off-hover.svg);
+}
+
+.filter-manufacturers__input:checked+.filter-manufacturers__label:hover:before,
+.filter-manufacturers__input:focus:checked+.filter-manufacturers__label:before {
+  background-image: url(../img/checkbox-on-hover.svg);
+}
+
+.filter-manufacturers__input:focus+.filter-manufacturers__label {
+  text-shadow: 0 0 1px var(--grey-300);
+}
+
+.filter-manufacturers__input:disabled+.filter-manufacturers__label {
+  opacity: 0.4;
+}
+
+.filter-manufacturers__input:disabled+.filter-manufacturers__label::before {
+  background-image: url(../img/checkbox-off-disabled.svg);
+}
+
+.filter-manufacturers__input:checked:disabled+.filter-manufacturers__label::before {
+  background-image: url(../img/checkbox-on-disabled.svg);
+}
+
 
 /* filter-power */
 
@@ -2057,6 +2091,34 @@ body {
   border-radius: 50%;
 }
 
+.filter-power__label:hover::before,
+.filter-power__input:focus+.filter-power__label::before{
+  border-color: var(--grey-300);
+}
+
+.filter-power__input:checked+.filter-power__label:hover::after,
+.filter-power__input:focus:checked+.filter-power__label::after {
+  background-color: var(--grey-300);
+}
+
+.filter-power__input:focus+.filter-power__label {
+  text-shadow: 0 0 1px var(--grey-300);
+}
+
+.filter-power__input:disabled+.filter-power__label {
+  opacity: 0.4;
+}
+
+.filter-power__input:disabled+.filter-power__label::before {
+  border-color: var(--grey-300);
+  opacity: 0.3;
+}
+
+.filter-power__input:disabled+.filter-power__label::after {
+  background-color: var(--grey-300);
+  opacity: 0.3;
+}
+
 .filter-form__button {
   width: 100%;
   padding: 9px 79px;
@@ -2065,6 +2127,14 @@ body {
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid var(--grey-50);
+}
+
+.filter-form__button:hover {
+  background-color: var(--grey-250-opacity-03);
+}
+
+.filter-form__button:active {
+  background-color: var(--grey-200);
 }
 
 

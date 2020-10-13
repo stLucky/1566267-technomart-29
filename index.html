@@ -23,7 +23,8 @@
               <span class="visually-hidden">Поиск по сайту</span>
             </label>
             <input id="search-form__input" type="search" placeholder="Поиск:">
-            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
                 fill="#fff" opacity=".3" /></svg>
@@ -51,7 +52,7 @@
           <ul class="user-menu header-main__user-menu">
             <li class="user-menu__item">
               <a class="link user-menu__link user-menu__link_type_enter" href="blank.html">
-                <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" focusable="false" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z" fill="#C5C5C5" />
                   <path d="M16.18 15.01h-4.79V17h4.79c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 
                     0h-4.79v1.99h4.79c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z" fill="#C5C5C5" />
@@ -95,23 +96,26 @@
         <ul class="shop-menu__list">
           <li class="shop-menu__item shop-menu__item_theme_sun mark-new">
             <h3 class="shop-menu__title">Материалы</h3>
-            <a class="link shop-menu__link shop-menu__link" href="blank.html">На любой вкус</a>
+            <a class="link shop-menu__link shop-menu__link" href="blank.html" aria-label="Перейти в каталог с материалами">На любой вкус</a>
           </li>
           <li class="shop-menu__item shop-menu__item_theme_sky">
             <h3 class="shop-menu__title">Инструмент</h3>
-            <a class="link shop-menu__link" href="blank.html">На все случаи</a>
+            <a class="link shop-menu__link" href="blank.html" aria-label="Перейти в каталог с инструментами">На все
+              случаи</a>
           </li>
           <li class="shop-menu__item shop-menu__item_theme_purple">
             <h3 class="shop-menu__title">Техника</h3>
-            <a class="link shop-menu__link" href="blank.html">Для стройки</a>
+            <a class="link shop-menu__link" href="blank.html" aria-label="Перейти в каталог с техникой">Для
+              стройки</a>
           </li>
           <li class="shop-menu__item shop-menu__item_theme_grass">
             <h3 class="shop-menu__title">Скидки 50%</h3>
-            <a class="link shop-menu__link" href="blank.html">На 350 товаров</a>
+            <a class="link shop-menu__link" href="blank.html" aria-label="Перейти в каталог со скидками">На 350
+              товаров</a>
           </li>
           <li class="shop-menu__item shop-menu__item_theme_lightsun">
             <h3 class="shop-menu__title">Доставка</h3>
-            <a class="link shop-menu__link" href="blank.html">Бесплатно</a>
+            <a class="link shop-menu__link" href="blank.html" aria-label="Перейти в раздел доставки">Бесплатно</a>
           </li>
           <li class="shop-menu__item-slider">
             <div class="slider">
@@ -161,80 +165,84 @@
         </div>
         <div class="catalogues-body">
           <ul class="catalogues-content">
-            <li class="product-card">
+            <li class="product-card" tabindex="0">
               <h3 class="product-card__title">
                 Перфоратор BOSCH BFG 9000
               </h3>
               <img class="product-card__image product-card__image_type_9000" src="img/bfg-9000.jpg" width="184"
-                height="164" alt="Перфоратор BOSCH модель BFG 9000">
+                height="164" alt="">
               <ul class="useraction-menu">
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_cart"
-                    type="button">Купить</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 9000 в корзину">Купить</button>
                 </li>
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                    type="button">В&nbsp;закладки</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 9000 в закладки">В&nbsp;закладки</button>
                 </li>
               </ul>
               <s class="product-card__invalid-price">32500 Р.</s>
-              <a class="link link-button product-card__link product-card__link_type_9000" href="blank.html">25500 Р.</a>
+              <a class="link link-button product-card__link product-card__link_type_9000" href="blank.html"
+                aria-label="Перейти на страницу товара">25500 Р.</a>
             </li>
-            <li class="product-card mark-new">
+            <li class="product-card mark-new" tabindex="0">
               <h3 class="product-card__title product-card__title_type_3000">
                 Перфоратор BOSCH BFG 3000
               </h3>
               <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-3000.jpg" width="127"
-                height="112" alt="Перфоратор BOSCH модель BFG 3000">
+                height="112" alt="">
               <ul class="useraction-menu">
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_cart"
-                    type="button">Купить</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
                 </li>
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                    type="button">В&nbsp;закладки</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в закладки">В&nbsp;закладки</button>
                 </li>
               </ul>
               <s class="product-card__invalid-price">22500 Р.</s>
-              <a class="link link-button product-card__link" href="blank.html">15500 Р.</a>
+              <a class="link link-button product-card__link" href="blank.html"
+                aria-label="Перейти на страницу товара">15500 Р.</a>
             </li>
-            <li class="product-card">
+            <li class="product-card" tabindex="0">
               <h3 class="product-card__title">
                 Перфоратор BOSCH BFG 6000
               </h3>
               <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                height="128" alt="">
               <ul class="useraction-menu">
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_cart"
-                    type="button">Купить</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                 </li>
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                    type="button">В&nbsp;закладки</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                 </li>
               </ul>
               <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-              <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+              <a class="link link-button product-card__link" href="blank.html"
+                aria-label="Перейти на страницу товара">25500 Р.</a>
             </li>
-            <li class="product-card mark-new">
+            <li class="product-card mark-new" tabindex="0">
               <h3 class="product-card__title">
                 Перфоратор BOSCH BFG 2000
               </h3>
               <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-2000.jpg" width="127"
-                height="112" alt="Перфоратор BOSCH модель BFG 2000">
+                height="112" alt="">
               <ul class="useraction-menu">
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_cart"
-                    type="button">Купить</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
                 </li>
                 <li>
                   <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                    type="button">В&nbsp;закладки</button>
+                    type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в закладки">В&nbsp;закладки</button>
                 </li>
               </ul>
-              <a class="link link-button product-card__link" href="blank.html">12500 Р.</a>
+              <a class="link link-button product-card__link" href="blank.html"
+                aria-label="Перейти на страницу товара">12500 Р.</a>
             </li>
           </ul>
         </div>
@@ -250,49 +258,56 @@
         <div class="catalogues-body">
           <ul class="catalogues-content">
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html" aria-label="Перейти на страницу производителя BOSCH">
                 <img class="manufacturer-card__logo" src="img/logo-bosch.png" width="126" height="37"
                   alt="Логотип производителя инструментов для ремонта BOSCH">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя Makita">
                 <img class="manufacturer-card__logo" src="img/logo-makita.png" width="123" height="40"
                   alt="Логотип производителя инструментов для ремонта Makita">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя Dewalt">
                 <img class="manufacturer-card__logo" src="img/logo-dewalt.png" width="146" height="44"
                   alt="Логотип производителя инструментов для ремонта DeWalt">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя Интерскол">
                 <img class="manufacturer-card__logo" src="img/logo-interscol.png" width="200" height="75"
                   alt="Логотип производителя инструментов для ремонта Интерскол">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя HITACHI">
                 <img class="manufacturer-card__logo" src="img/logo-hitachi.png" width="169" height="31"
                   alt="Логотип производителя инструментов для ремонта HITACHI">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя LG">
                 <img class="manufacturer-card__logo" src="img/logo-lg.png" width="121" height="73"
                   alt="Логотип производителя инструментов для ремонта LG">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя AEG Power Solution">
                 <img class="manufacturer-card__logo" src="img/logo-aeg.png" width="151" height="96"
                   alt="Логотип производителя инструментов для ремонта AEG Power Solution">
               </a>
             </li>
             <li class="manufacturer-card">
-              <a class="link manufacturer-card__link" href="blank.html">
+              <a class="link manufacturer-card__link" href="blank.html"
+                aria-label="Перейти на страницу производителя metabo">
                 <img class="manufacturer-card__logo" src="img/logo-metabo.png" width="204" height="69"
                   alt="Логотип производителя инструментов для ремонта metabo">
               </a>
@@ -337,7 +352,8 @@
               </li>
               <li class="slide-services">
                 <div class="description-services description-services__guarantee">
-                  <h3 class="main__titles description-services__title description-services__title_type_guarantee">Гарантия</h3>
+                  <h3 class="main__titles description-services__title description-services__title_type_guarantee">
+                    Гарантия</h3>
                   <p class="main__texts description-services__text description-services__text_type_guarantee">
                     Если купленный у нас товар поломается или заискрит,
                     а&nbsp;также в случае пожара, спровоцированного его
@@ -391,7 +407,10 @@
             <p class="main__texts contacts__text">
               Вы можете забрать товар сами,<br> заехав в наш офис:
             </p>
-            <a class="link contacts__image-link" href=""><img class="contacts__image" src="img/map.jpg" width="300"
+            <a class="link contacts__image-link"
+              href="https://www.google.ru/maps/d/viewer?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru&ll=59.93878907302976%2C30.323349251852488&z=17"
+              aria-label="Перейти к сервису google карты"><img class="contacts__image"
+                src="img/map.jpg" width="300"
                 height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
             <a class="link link-button contacts__link" href="">Заблудились? Напишите нам!</a>
           </section>
