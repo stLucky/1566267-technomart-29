@@ -912,12 +912,12 @@ body {
 }
 
 .product-card:hover .product-card__image,
-.product-card:focus .product-card__image {
+.product-card:focus-within .product-card__image {
   display: none;
 }
 
 .product-card:hover .useraction-menu,
-.product-card:focus .useraction-menu {
+.product-card:focus-within .useraction-menu {
   display: block;
 }
 

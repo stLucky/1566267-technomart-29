@@ -13,7 +13,7 @@
     <div class="header-top">
       <div class="layout-positioner">
         <div class="header-top-content">
-          <a class="header-top__logo header-top__logo_type_link" href="index.html">
+          <a class="header-top__logo header-top__logo_type_link" href="index.html" aria-label="Главная страница">
             <img class="header-top__logo-img" src="img/logo-technomart-header.svg" width="108" height="18"
               alt="Логотип нашего магазина Техномарт">
           </a>
@@ -22,7 +22,7 @@
               <span class="visually-hidden">Поиск по сайту</span>
             </label>
             <input id="search-form__input" type="search" placeholder="Поиск:">
-            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
                 fill="#fff" opacity=".3" /></svg>
@@ -51,7 +51,7 @@
             <ul class="user-menu authorized-user-menu__list">
               <li class="authorized-user-menu__item">
                 <a class="link user-menu__link authorized-user-menu__link-profile" href="blank.html">
-                  <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" focusable="false" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 
                   2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 
                   1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5" />
@@ -62,7 +62,7 @@
               <li class="authorized-user-menu__item">
                 <a class="link user-menu__link authorized-user-menu__link-deauthorization" href="blank.html">
                   <span class="visually-hidden">Выйти</span>
-                  <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" focusable="false" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5" />
                     <path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 
                     15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5" />
@@ -127,15 +127,17 @@
                   <div class="range-controls__scale">
                     <div class="range-controls__bar"></div>
                   </div>
-                  <div class="range-controls__toggle range-controls__toggle_type_min" tabindex="0"></div>
-                  <div class="range-controls__toggle range-controls__toggle_type_max" tabindex="0"></div>
+                  <div class="range-controls__toggle range-controls__toggle_type_min" tabindex="0"
+                    aria-label="Минимальная цена"></div>
+                  <div class="range-controls__toggle range-controls__toggle_type_max" tabindex="0"
+                    aria-label="Максимальная цена"></div>
                 </div>
                 <div class="price-controls">
-                  <label class="min-price">
+                  <label class="min-price" aria-label="Минимальная цена">
                     <input type="text" name="min-price" value="0">
                   </label>
                   &ndash;
-                  <label class="max-price">
+                  <label class="max-price" aria-label="Максимальная цена">
                     <input type="text" name="max-price" value="30000">
                   </label>
                 </div>
@@ -212,7 +214,7 @@
               <li class="sort-submenu__item">
                 <a class="link sort-submenu__link sort-submenu__link-current sort-submenu__link_type_growing" href="">
                   <span class="visually-hidden">По возрастанию</span>
-                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.66 0l5.5 10h-11" fill="#C5C5C5" />
                   </svg>
                 </a>
@@ -220,7 +222,7 @@
               <li class="sort-submenu__item">
                 <a class="link sort-submenu__link sort-submenu__link_type_decreasing" href="">
                   <span class="visually-hidden">По убыванию</span>
-                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.66 10L.16 0h11" fill="#C5C5C5" />
                   </svg>
                 </a>
@@ -230,164 +232,175 @@
           <section class="main-catalog">
             <h2 class="visually-hidden">Каталог перфораторов</h2>
             <ul class="main-catalog__list">
-              <li class="product-card ">
+              <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                  height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                  height="128" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card">
+              <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                  height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                  height="128" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card product-card-current mark-new">
+              <li class="product-card product-card-current mark-new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                  height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                  height="128" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card mark-new">
+              <li class="product-card mark-new" tabindex="0">
                 <h3 class="product-card__title product-card__title_type_3000">Перфоратор BOSCH BFG 3000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-3000.jpg" width="127"
-                  height="112" alt="Перфоратор BOSCH модель BFG 3000">
+                  height="112" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price">22500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">15500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">15500 Р.</a>
               </li>
-              <li class="product-card">
+              <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                  height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                  height="128" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card mark-new">
+              <li class="product-card mark-new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-2000.jpg" width="127"
-                  height="112" alt="Перфоратор BOSCH модель BFG 2000">
+                  height="112" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
-                <a class="link link-button product-card__link" href="blank.html">12500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">12500 Р.</a>
               </li>
-              <li class="product-card mark-new">
+              <li class="product-card mark-new" tabindex="0">
                 <h3 class="product-card__title product-card__title_type_3000">Перфоратор BOSCH BFG 3000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-3000.jpg" width="127"
-                  height="112" alt="Перфоратор BOSCH модель BFG 3000">
+                  height="112" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price">22500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">15500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">15500 Р.</a>
               </li>
-              <li class="product-card">
+              <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
-                  height="128" alt="Перфоратор BOSCH модель BFG 6000">
+                  height="128" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
                 <s class="product-card__invalid-price product-card__invalid-price_type_6000">30500 Р.</s>
-                <a class="link link-button product-card__link" href="blank.html">25500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card mark-new">
+              <li class="product-card mark-new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-2000.jpg" width="127"
-                  height="112" alt="Перфоратор BOSCH модель BFG 2000">
+                  height="112" alt="">
                 <ul class="useraction-menu">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
-                      type="button">Купить</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
                   </li>
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_bookmarks"
-                      type="button">В&nbsp;закладки</button>
+                      type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в закладки">В&nbsp;закладки</button>
                   </li>
                 </ul>
-                <a class="link link-button product-card__link" href="blank.html">12500 Р.</a>
+                <a class="link link-button product-card__link" href="blank.html"
+                  aria-label="Перейти на страницу товара">12500 Р.</a>
               </li>
             </ul>
             <ul class="pagination-menu">
               <li class="pagination-menu__item"><span
                   class="link pagination-menu__item-content pagination-menu__item-content-current">1</span></li>
-              <li class="pagination-menu__item"><a class="link pagination-menu__item-content" href="blank.html">2</a>
+              <li class="pagination-menu__item"><a class="link pagination-menu__item-content" href="blank.html"
+                  aria-label="Вторая страница с каталогом перфораторов">2</a>
               </li>
-              <li class="pagination-menu__item"><a class="link pagination-menu__item-content" href="blank.html">3</a>
+              <li class="pagination-menu__item"><a class="link pagination-menu__item-content" href="blank.html"
+                  aria-label="Третья страница с каталогом перфораторов">3</a>
               </li>
               <li class="pagination-menu__item"><button
                   class="link pagination-menu__item-content pagination-menu__item-content_type_button"
@@ -419,7 +432,7 @@
       <div class="layout-positioner">
         <div class="footer-top-content">
           <div class="logo-address-content">
-            <a class="footer__logo footer__logo_type_link" href=" index.html"><img class="footer__logo-img"
+            <a class="footer__logo footer__logo_type_link" href=" index.html" aria-label="Главная страница"><img class="footer__logo-img"
                 src="img/logo-technomart-footer.svg" width="138" height="23"
                 alt="Логотип нашего магазина Техномарт"></a>
             <address class="footer-address">
