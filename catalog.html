@@ -9,7 +9,7 @@
 </head>
 
 <body class="page-body">
-  <header class="header header__catalogue">
+  <header class="header page-body__header-catalogue">
     <div class="header-top">
       <div class="layout-positioner">
         <div class="header-top-content">
@@ -18,11 +18,12 @@
               alt="Логотип нашего магазина Техномарт">
           </a>
           <form class="search-form header-top__search-form" action="#" method="GET">
-            <label for="search-form__input">
+            <label for="search-form__search">
               <span class="visually-hidden">Поиск по сайту</span>
             </label>
-            <input id="search-form__input" type="search" placeholder="Поиск:">
-            <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <input class="search-form__input" id="search-form__search" type="search" placeholder="Поиск:">
+            <svg class="search-form__input-image" aria-hidden="true" focusable="false" width="17" height="17"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
                 fill="#fff" opacity=".3" /></svg>
@@ -35,9 +36,9 @@
         </div>
       </div>
     </div>
-    <div class="header-main">
+    <div class="header-main header__main">
       <div class="layout-positioner">
-        <div class="header-main-content">
+        <div class="header-main__content">
           <p class="header-main__text">
             Интернет-магазин<br>
             строительных материалов<br>
@@ -47,7 +48,7 @@
             <a class="link header-contacts__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
-          <div class="authorized-user-menu">
+          <div class="authorized-user-menu header-main__authorized-user-menu">
             <ul class="user-menu authorized-user-menu__list">
               <li class="authorized-user-menu__item">
                 <a class="link user-menu__link authorized-user-menu__link-profile" href="blank.html">
@@ -70,7 +71,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="authorized-user-submenu">
+            <ul class="authorized-user-submenu header-main__authorized-user-submenu">
               <li class="authorized-user-submenu__item">
                 <a class="link authorized-user-submenu__link" href="blank.html">Мои заказы</a>
               </li>
@@ -97,7 +98,7 @@
   </header>
   <main class="main">
     <div class="layout-positioner">
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs main__breadcrumbs">
         <li class="breadcrumbs__item ">
           <a class="link breadcrumbs__item-content-home" href="index.html">
             <span class="visually-hidden">Главная</span>
@@ -116,23 +117,23 @@
         </li>
       </ul>
       <h1 class="main__title">Перфораторы</h1>
-      <div class="main-container">
+      <div class="main-container main__container">
         <section class="filter">
           <h2 class="filter__title">Фильтр</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
             <fieldset class="filter-price filter-form__fieldset">
               <legend class="filter-subtitle filter-price__title">Цена</legend>
               <div class="filter-price-content">
-                <div class="range-controls">
+                <div class="range-controls filter-price__range-controls">
                   <div class="range-controls__scale">
                     <div class="range-controls__bar"></div>
                   </div>
-                  <div class="range-controls__toggle range-controls__toggle_type_min" tabindex="0"
-                    aria-label="Минимальная цена"></div>
-                  <div class="range-controls__toggle range-controls__toggle_type_max" tabindex="0"
-                    aria-label="Максимальная цена"></div>
+                  <button class="range-controls__toggle range-controls__toggle_type_min" type="button"
+                    aria-label="Минимальная цена"></button>
+                  <button class="range-controls__toggle range-controls__toggle_type_max" type="button"
+                    aria-label="Максимальная цена"></button>
                 </div>
-                <div class="price-controls">
+                <div class="price-controls filter-price__price-controls">
                   <label class="min-price" aria-label="Минимальная цена">
                     <input type="text" name="min-price" value="0">
                   </label>
@@ -143,7 +144,7 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter-manufacturers filter-form__fieldset">
+            <fieldset class="filter-manufacturers filter-form__fieldset filter-form__manufacturers">
               <legend class="filter-subtitle filter-manufacturers__title">Производители</legend>
               <ul class="filter-manufacturers__list">
                 <li class="filter-manufacturers__item">
@@ -178,7 +179,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-power filter-form__fieldset">
+            <fieldset class="filter-power filter-form__fieldset filter-form__power">
               <legend class="filter-subtitle filter-power__title">Питание</legend>
               <ul class="filter-power__list">
                 <li class="filter-power__item">
@@ -197,22 +198,23 @@
           </form>
         </section>
         <div class="main-content">
-          <div class="sort-menu">
+          <div class="sort-menu main-content__sort-menu">
             <h2 class="sort-menu__title">Сортировка</h2>
             <ul class="sort-menu__list">
               <li class="sort-menu__item">
-                <a class="link sort-menu__link sort-menu__link-current sort-menu__link_type_price" href="">По цене</a>
+                <a class="link sort-menu__link sort-menu__link-current sort-menu__link_type_price" href="blank.html">По цене</a>
               </li>
               <li class="sort-menu__item">
-                <a class="link sort-menu__link sort-menu__link_type_type" href="">По типу</a>
+                <a class="link sort-menu__link sort-menu__link_type_type" href="blank.html">По типу</a>
               </li>
               <li class="sort-menu__item">
-                <a class="link sort-menu__link sort-menu__link_type_functional" href="">По функционалу</a>
+                <a class="link sort-menu__link sort-menu__link_type_functional" href="blank.html">По функционалу</a>
               </li>
             </ul>
-            <ul class="sort-submenu">
+            <ul class="sort-submenu sort-menu__sublist">
               <li class="sort-submenu__item">
-                <a class="link sort-submenu__link sort-submenu__link-current sort-submenu__link_type_growing" href="">
+                <a class="link sort-submenu__link sort-submenu__link-current sort-submenu__link_type_growing"
+                  href="blank.html">
                   <span class="visually-hidden">По возрастанию</span>
                   <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.66 0l5.5 10h-11" fill="#C5C5C5" />
@@ -220,7 +222,7 @@
                 </a>
               </li>
               <li class="sort-submenu__item">
-                <a class="link sort-submenu__link sort-submenu__link_type_decreasing" href="">
+                <a class="link sort-submenu__link sort-submenu__link_type_decreasing" href="blank.html">
                   <span class="visually-hidden">По убыванию</span>
                   <svg aria-hidden="true" focusable="false" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.66 10L.16 0h11" fill="#C5C5C5" />
@@ -236,7 +238,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
                   height="128" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
@@ -254,7 +256,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
                   height="128" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
@@ -268,11 +270,11 @@
                 <a class="link link-button product-card__link" href="blank.html"
                   aria-label="Перейти на страницу товара">25500 Р.</a>
               </li>
-              <li class="product-card product-card-current mark-new" tabindex="0">
+              <li class="product-card mark-new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
                   height="128" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
@@ -290,7 +292,7 @@
                 <h3 class="product-card__title product-card__title_type_3000">Перфоратор BOSCH BFG 3000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-3000.jpg" width="127"
                   height="112" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
@@ -308,7 +310,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
                   height="128" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
@@ -326,7 +328,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-2000.jpg" width="127"
                   height="112" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
@@ -343,7 +345,7 @@
                 <h3 class="product-card__title product-card__title_type_3000">Перфоратор BOSCH BFG 3000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-3000.jpg" width="127"
                   height="112" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
@@ -361,7 +363,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
                 <img class="product-card__image product-card__image_type_6000" src="img/bfg-6000.jpg" width="144"
                   height="128" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
@@ -379,7 +381,7 @@
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
                 <img class="product-card__image product-card__image_type_3000-2000" src="img/bfg-2000.jpg" width="127"
                   height="112" alt="">
-                <ul class="useraction-menu">
+                <ul class="useraction-menu product-card__list">
                   <li>
                     <button class="useraction-menu__button useraction-menu__button_type_cart"
                       type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
@@ -393,7 +395,7 @@
                   aria-label="Перейти на страницу товара">12500 Р.</a>
               </li>
             </ul>
-            <ul class="pagination-menu">
+            <ul class="pagination-menu main-catalog__pagination-menu">
               <li class="pagination-menu__item"><span
                   class="link pagination-menu__item-content pagination-menu__item-content-current">1</span></li>
               <li class="pagination-menu__item"><a class="link pagination-menu__item-content" href="blank.html"
@@ -442,9 +444,9 @@
               </p>
             </address>
           </div>
-          <section class="footer__site-menu">
+          <section class="footer-site-menu footer__site-menu">
             <h2 class="visually-hidden">Навигация</h2>
-            <ul class="footer-site-menu-top footer__site-menu-top">
+            <ul class="footer-site-menu-top footer-site-menu__top">
               <li class="footer-site-menu-top__item"><a class="link footer-site-menu-top__link"
                   href="blank.html">Компания</a>
               </li>
@@ -460,7 +462,7 @@
                   href="blank.html">Контакты</a>
               </li>
             </ul>
-            <ul class="footer-site-menu-bottom footer__site-menu-bottom">
+            <ul class="footer-site-menu-bottom footer-site-menu__bottom">
               <li class="footer-site-menu-bottom__item"><a class="link footer-site-menu-bottom__link"
                   href="blank.html">Материалы</a></li>
               <li class="footer-site-menu-bottom__item"><a class="link footer-site-menu-bottom__link"
@@ -481,9 +483,9 @@
             &copy; 2010-2019 Компания &laquo;Техномарт&raquo;<br>
             Все права защищены
           </p>
-          <section class="footer__social-menu">
+          <section class="footer-social-menu footer__social-menu">
             <h2 class="visually-hidden">Мы в социальных сетях!</h2>
-            <ul class="social-menu social-menu-wrap">
+            <ul class="social-menu footer-social-menu__list">
               <li class="social-menu__item">
                 <a class="link social-menu__link social-menu__link_type_vk" href="blank.html">
                   <span class="visually-hidden">ВКонтакте</span>
@@ -525,6 +527,7 @@
     </div>
     <button class="modal-close modal-close__cart" type="button" aria-label="Закрыть"></button>
   </div>
+  <script src="js/script-catalog.js"></script>
 </body>
 
 </html>
