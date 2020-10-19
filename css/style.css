@@ -1650,8 +1650,8 @@ body {
   margin: 0 0 11px;
 }
 
-.feedback-form input,
-.feedback-form textarea {
+.feedback-form__input,
+.feedback-form__textarea {
   box-sizing: border-box;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -1660,12 +1660,12 @@ body {
   border-radius: 2px;
 }
 
-.feedback-form input {
+.feedback-form__input {
   width: 220px;
 }
 
-.feedback-form input::placeholder,
-.feedback-form textarea::placeholder {
+.feedback-form__input::placeholder,
+.feedback-form__textarea::placeholder {
   color: var(--basic-grey-400);
 }
 
@@ -1677,7 +1677,7 @@ body {
   padding: 5px 10px 5px 12px;
 }
 
-.feedback-form textarea {
+.feedback-form__textarea {
   width: 100%;
   max-width: 100%;
   min-height: 114px;

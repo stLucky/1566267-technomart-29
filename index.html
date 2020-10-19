@@ -151,8 +151,8 @@
                 aria-label="Вперед"></button>
             </div>
             <div class="slider-controls-bottom slider__controls-bottom">
-              <button class="slider-controls-bottom__button slider-controls-bottom__button-current" type="button" 
-              aria-label="Первый слайд"></button>
+              <button class="slider-controls-bottom__button slider-controls-bottom__button-current" type="button"
+                aria-label="Первый слайд"></button>
               <button class="slider-controls-bottom__button" type="button" aria-label="Второй слайд"></button>
             </div>
           </li>
@@ -329,18 +329,19 @@
           </div>
           <ul class="services__slider-controls">
             <li class="services__item">
-              <button class="services__button services__button-current" type="button">Доставка</button>
+              <button class="services__button services__button-first services__button-current"
+                type="button">Доставка</button>
             </li>
             <li class="services__item">
-              <button class="services__button" type="button">Гарантия</button>
+              <button class="services__button services__button-second" type="button">Гарантия</button>
             </li>
             <li class="services__item">
-              <button class="services__button" type="button">Кредит</button>
+              <button class="services__button services__button-third" type="button">Кредит</button>
             </li>
           </ul>
           <div class="slider-services">
             <ul class="slider-services__list">
-              <li class="slide-services slide-services-current">
+              <li class="slide-services slide-services-first slide-services-current">
                 <div class="description-services description-services__delivery">
                   <h3 class="main__titles description-services__title">Доставка</h3>
                   <p class="main__texts description-services__text description-services__text_type_delivery">
@@ -351,7 +352,7 @@
                   </p>
                 </div>
               </li>
-              <li class="slide-services">
+              <li class="slide-services slide-services-second">
                 <div class="description-services description-services__guarantee">
                   <h3 class="main__titles description-services__title description-services__title_type_guarantee">
                     Гарантия</h3>
@@ -366,7 +367,7 @@
 
                 </div>
               </li>
-              <li class="slide-services">
+              <li class="slide-services slide-services-third">
                 <div class="description-services description-services__credit">
                   <h3 class="main__titles description-services__title">Кредит</h3>
                   <p class="main__texts description-services__text description-services__text_type_credit">
@@ -508,15 +509,18 @@
       <div class="feedback-form__top">
         <p class="feedback-form__item-contacts">
           <label for="feedback-name">Ваше имя:</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="feedback-form__input feedback-form__input_type_text" id="feedback-name" type="text" name="name"
+            placeholder="Имя Фамилия">
         </p>
         <p class="feedback-form__item-contacts">
           <label for="feedback-email">Ваш e-mail:</label>
-          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+          <input class="feedback-form__input feedback-form__input_type_email" id="feedback-email" type="email"
+            name="email" placeholder="email@example.com">
         </p>
         <p class="feedback-form__item-text">
           <label for="feedback-text">Текст письма:</label>
-          <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+          <textarea class="feedback-form__textarea" id="feedback-text" name="text"
+            placeholder="В свободной форме"></textarea>
         </p>
       </div>
       <div class="feedback-form__bottom">
