@@ -1,4 +1,11 @@
+const MODAL_SHOW = "modal-show";
+const SLIDE_CURRENT = "slide-current";
+const SLIDECONTROL_CURRENT = "slider-controls-bottom__button-current";
+const SLIDESERVICES_CURRENT = "slide-services-current";
+const SERVICESBUTTON_CURRENT = "services__button-current";
+
 const feedbackLink = document.querySelector(".contacts__link");
+
 const feedbackModal = document.querySelector(".modal-feedback");
 const feedbackClose = feedbackModal.querySelector(".modal-close");
 const feedbackForm = feedbackModal.querySelector(".feedback-form");
@@ -17,54 +24,46 @@ try {
   isStorageSupport = false;
 };
 
-feedbackLink.addEventListener("click", function(evt) {
+feedbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  feedbackModal.classList.add("modal-show");
+  feedbackModal.classList.add(MODAL_SHOW);
+
   if (storageName && storageEmail) {
     feedbackName.value = storageName;
     feedbackEmail.value = storageEmail;
-  } else if (storageName && !storageEmail) {
-      feedbackName.value = storageName;
-    } else {
-        feedbackEmail.value = storageEmail;
-      }
-  if (storageName && storageEmail) {
     feedbackMessage.focus();
   } else if (storageName && !storageEmail) {
-      feedbackEmail.focus();
-    } else {
-        feedbackName.focus(); 
-      } 
+    feedbackName.value = storageName;
+    feedbackEmail.focus();
+  } else {
+    feedbackEmail.value = storageEmail;
+    feedbackName.focus();
+  }
 });
 
-feedbackClose.addEventListener("click", function(evt) {
+feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  feedbackModal.classList.remove("modal-show");
+  feedbackModal.classList.remove(MODAL_SHOW);
   feedbackModal.classList.remove("modal-error");
 });
 
-feedbackForm.addEventListener("submit", function(evt) {
+feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
     evt.preventDefault();
     feedbackModal.classList.remove("modal-error");
     feedbackModal.offsetWidth = feedbackModal.offsetWidth;
     feedbackModal.classList.add("modal-error");
-  }
-  else {
-    if (isStorageSupport) {
+  } else if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
       localStorage.setItem("email", feedbackEmail.value);
-    }  
-  }
+    }
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (feedbackModal.classList.contains("modal-show")) {
-      evt.preventDefault();
-      feedbackModal.classList.remove("modal-show");
-      feedbackModal.classList.remove("modal-error");
-    }
+  if (evt.keyCode === 27 && feedbackModal.classList.contains(MODAL_SHOW)) {
+    evt.preventDefault();
+    feedbackModal.classList.remove(MODAL_SHOW);
+    feedbackModal.classList.remove("modal-error");
   }
 });
 
@@ -74,20 +73,18 @@ const mapClose = mapModal.querySelector(".modal-close");
 
 mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  mapModal.classList.add("modal-show");
+  mapModal.classList.add(MODAL_SHOW);
 });
 
 mapClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  mapModal.classList.remove("modal-show");
+  mapModal.classList.remove(MODAL_SHOW);
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (mapModal.classList.contains("modal-show")) {
+  if (evt.keyCode === 27 && mapModal.classList.contains(MODAL_SHOW)) {
       evt.preventDefault();
-      mapModal.classList.remove("modal-show");
-    }
+      mapModal.classList.remove(MODAL_SHOW);
   }
 });
 
@@ -96,22 +93,22 @@ const slideButtonBack = document.querySelector(".slider-controls-middle__back");
 const slideButtonNext = document.querySelector(".slider-controls-middle__next");
 const slideButtons = document.querySelectorAll(".slider-controls-bottom__button");
 
-let switchSlides = function  () {
+let switchSlides = function () {
   for (let slide of slides) {
-    if (slide.classList.contains("slide-current") ) {
-        slide.classList.remove("slide-current");
+    if (slide.classList.contains(SLIDE_CURRENT)) {
+      slide.classList.remove(SLIDE_CURRENT);
     } else {
-      slide.classList.add("slide-current");
-      }
-  };
-  
-  for (let button of slideButtons) {
-    if (button.classList.contains("slider-controls-bottom__button-current")) {
-      button.classList.remove("slider-controls-bottom__button-current");
-    } else {
-      button.classList.add("slider-controls-bottom__button-current");
+      slide.classList.add(SLIDE_CURRENT);
     }
-  }  
+  };
+
+  for (let button of slideButtons) {
+    if (button.classList.contains(SLIDECONTROL_CURRENT)) {
+      button.classList.remove(SLIDECONTROL_CURRENT);
+    } else {
+      button.classList.add(SLIDECONTROL_CURRENT);
+    }
+  }
 };
 
 slideButtonBack.addEventListener("click", function (evt) {
@@ -126,44 +123,51 @@ slideButtonNext.addEventListener("click", function (evt) {
 
 for (let button of slideButtons) {
   button.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  switchSlides();
+    evt.preventDefault();
+    switchSlides();
   })
 };
 
 const buttonServicesFirst = document.querySelector(".services__button-first");
 const buttonServicesSecond = document.querySelector(".services__button-second");
 const buttonServicesThird = document.querySelector(".services__button-third");
+
 const slideServicesFirst = document.querySelector(".slide-services-first");
 const slideServicesSecond = document.querySelector(".slide-services-second");
 const slideServicesThird = document.querySelector(".slide-services-third");
 
 buttonServicesFirst.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonServicesSecond.classList.remove("services__button-current")
-  buttonServicesThird.classList.remove("services__button-current")
-  buttonServicesFirst.classList.add("services__button-current")
-  slideServicesSecond.classList.remove("slide-services-current")
-  slideServicesThird.classList.remove("slide-services-current")
-  slideServicesFirst.classList.add("slide-services-current")
+
+  buttonServicesSecond.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesThird.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesFirst.classList.add(SERVICESBUTTON_CURRENT);
+
+  slideServicesSecond.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesThird.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesFirst.classList.add(SLIDESERVICES_CURRENT);
 });
 
 buttonServicesSecond.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonServicesFirst.classList.remove("services__button-current")
-  buttonServicesThird.classList.remove("services__button-current")
-  buttonServicesSecond.classList.add("services__button-current")
-  slideServicesFirst.classList.remove("slide-services-current")
-  slideServicesThird.classList.remove("slide-services-current")
-  slideServicesSecond.classList.add("slide-services-current")
+
+  buttonServicesFirst.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesThird.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesSecond.classList.add(SERVICESBUTTON_CURRENT);
+
+  slideServicesFirst.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesThird.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesSecond.classList.add(SLIDESERVICES_CURRENT);
 });
 
 buttonServicesThird.addEventListener("click", function (evt) {
   evt.preventDefault();
-  buttonServicesFirst.classList.remove("services__button-current")
-  buttonServicesSecond.classList.remove("services__button-current")
-  buttonServicesThird.classList.add("services__button-current")
-  slideServicesSecond.classList.remove("slide-services-current")
-  slideServicesFirst.classList.remove("slide-services-current")
-  slideServicesThird.classList.add("slide-services-current")
+
+  buttonServicesFirst.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesSecond.classList.remove(SERVICESBUTTON_CURRENT);
+  buttonServicesThird.classList.add(SERVICESBUTTON_CURRENT);
+
+  slideServicesSecond.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesFirst.classList.remove(SLIDESERVICES_CURRENT);
+  slideServicesThird.classList.add(SLIDESERVICES_CURRENT);
 });
