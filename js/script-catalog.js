@@ -1,7 +1,7 @@
 const cartLinks = document.querySelectorAll(".useraction-menu__button_type_cart");
 
 const cartModal = document.querySelector(".modal-cart");
-const cartClose = cartModal.querySelector(".modal-close");
+const cartCloseButton = cartModal.querySelector(".modal-close");
 const cartModalButton = cartModal.querySelector(".modal-cart__button");
 
 
@@ -17,7 +17,7 @@ cartModalButton.addEventListener("click", function (evt) {
   cartModal.classList.remove("modal-show-cart");
 });
 
-cartClose.addEventListener("click", function (evt) {
+cartCloseButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   cartModal.classList.remove("modal-show-cart");
 });
